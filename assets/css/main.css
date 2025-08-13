@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-playfair: "Playfair", serif;
+  --font-inter: "Inter", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --default-font-family: var(--font-poppins);
+
+--color-primary: #004080;     /* Navy terang */
+--color-secondary: #003366;  /* Navy medium */
+--color-tertiary: #002952;   /* Navy lebih gelap */
+--color-quaternary: #001933; /* Navy sangat gelap */
+--color-quinary: #335577;    /* Navy keabu-abuan */
+--color-senary: #4da6ff;     /* Aksen biru cerah */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
+}
+
+#mobileMenu a {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-xl hover:shadow-2xl transition-all duration-300;
+}
+
+.layanan-card {
+  @apply p-8 rounded-3xl text-center h-full flex flex-col justify-between min-h-[400px];
+}
+
+.nav-scrolled {
+  @apply backdrop-blur-md bg-white/10 border border-white/10 shadow-md;
+}
+
+.hover-rotate-text {
+  @apply overflow-hidden relative;
+}
+
+.hover-rotate-text span {
+  @apply inline-block;
+}
+
+#hero-title {
+  font-size: clamp(3rem, 5.5vw, 5.5rem);
+}
+
+#hero-subtitle {
+  font-size: clamp(1rem, 1.5vw, 1.5rem);
+}
+
+.section-title {
+  font-size: clamp(2.25rem, 4vw, 3.5rem);
+}
+
+.section-subtitle {
+  font-size: clamp(1.15rem, 2vw, 1.25rem);
+}
+
+.btn {
+  cursor: pointer;
+  padding: clamp(0.45rem, 1.5vw, 0.8rem) clamp(1.15rem, 2vw, 1.15rem);
+  font-size: clamp(0.85rem, 1.5vw, 1.15rem);
+}
+
+.count-container .count {
+  font-size: clamp(1.125rem, 1.5vw, 1.5rem);
+}
+
+.count-container div:last-child {
+  font-size: clamp(0.7rem, 1.5vw, 0.8rem);
+}
+
+.card .font-semibold {
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+}
+.card p.text-sm {
+  font-size: clamp(0.875rem, 1.2vw, 1rem);
+}
+.card img.w-10 {
+  width: clamp(2.5rem, 5vw, 3rem);
+  height: clamp(2.5rem, 5vw, 3rem);
+}
+
+.pricing-card li div p.font-semibold {
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+.pricing-card li div p.text-white\/70 {
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+}
+
+#contact .floating-card h3 {
+  font-size: clamp(1.1rem, 1.8vw, 1.25rem);
+}
+#contact .floating-card p {
+  font-size: clamp(0.8rem, 1.1vw, 0.9rem);
+}
+#contact .floating-card img {
+  width: clamp(1.5rem, 3vw, 2rem);
+  height: clamp(1.5rem, 3vw, 2rem);
+}
+
+footer h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+}
+
+@media (min-width: 768px) {
+  .gradient-cursor {
+    z-index: 2;
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+background: radial-gradient(
+  circle,
+  rgba(0, 25, 51, 0.15) 0%,
+  rgba(0, 20, 45, 0.1) 30%,
+  rgba(0, 15, 35, 0.08) 50%,
+  rgba(0, 10, 25, 0.05) 70%,
+  transparent 100%
+);
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: screen;
+    transform: translate(-50%, -50%);
+  }
+  
+  .gradient-cursor-inner {
+    z-index: 1;
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+background: radial-gradient(
+  circle,
+  rgba(0, 38, 77, 0.3) 0%,
+  rgba(0, 30, 60, 0.2) 40%,
+  rgba(0, 20, 40, 0.1) 70%,
+  transparent 100%
+);
+
+    pointer-events: none;
+    z-index: 2;
+    mix-blend-mode: screen;
+    transform: translate(-50%, -50%);
+  }
+
+  .count-wrapper {
+    bottom: 6.25rem;
+  }
+}

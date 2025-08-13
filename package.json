@@ -1,0 +1,25 @@
+{
+  "name": "kopimalas",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.8",
+    "gsap": "^3.13.0",
+    "lenis": "^1.3.4",
+    "swiper": "^11.2.8",
+    "tailwindcss": "^4.1.8"
+  },
+  "description": "Kopi Malas",
+  "main": "index.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
